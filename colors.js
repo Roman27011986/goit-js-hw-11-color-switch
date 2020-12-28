@@ -1,7 +1,7 @@
 const stertRef = document.querySelector('button[data-action="start"]');
 const stopRef = document.querySelector('button[data-action="stop"]');
-let timeoutId = null;
-let isActive = false;
+const timeoutId = null;
+const isActive = false;
 const colors = [
   '#FFFFFF',
   '#2196F3',
