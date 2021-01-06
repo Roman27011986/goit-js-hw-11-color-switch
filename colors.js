@@ -17,8 +17,10 @@ const randomIntegerFromInterval = (min, max) => {
 
 const addbodyColor = () => {
   if (isActive) {
+    
     return;
   }
+  stertRef.disabled = true
   isActive = true;
   timeoutId = setInterval(() => {
     let randomColor = randomIntegerFromInterval(0, colors.length);
@@ -27,6 +29,7 @@ const addbodyColor = () => {
 };
 stertRef.addEventListener('click', addbodyColor);
 stopRef.addEventListener('click', () => {
+  stertRef.disabled = false
   clearTimeout(timeoutId);
   isActive = false;
 });
